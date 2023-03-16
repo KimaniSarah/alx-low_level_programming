@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
- * will print
+/**
+ *main - will print with proper grammar, but the outcome is apiece of art
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
