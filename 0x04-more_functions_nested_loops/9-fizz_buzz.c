@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - print fizzbuzz
  *
@@ -27,7 +28,6 @@ int main(void)
 			printf("%d", i);
 		}
 		printf(" ");
-
 	}
 	printf("\n");
 	return (0);
