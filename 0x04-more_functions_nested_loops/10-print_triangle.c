@@ -2,7 +2,7 @@
 /**
  * print_triangle - print triangle
  * @size: size of triangle
- * Return: Always 0
+ * Return: square 
  */
 void print_triangle(int size)
 {
