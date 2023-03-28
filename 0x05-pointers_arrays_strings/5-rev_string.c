@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * rev_string - reverses a string.
+ * rev_string - reverses a string in place.
  * @s: string reversed
  *
  * Return: void
@@ -10,11 +10,13 @@
 void rev_string(char *s)
 {
 	int len = strlen(s);
-	int a;
+	int i, j;
+	char tmp;
 
-	for (a = len - 1; a >= 0; a--)
+	for (i = 0, j = len - 1; i < j; i++, j--)
 	{
-		putchar(s[a]);
+		tmp = s[i];
+		s[i] = s[j];
+		s[j] = tmp;
 	}
-	putchar('\n');
 }
