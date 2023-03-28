@@ -10,14 +10,11 @@
 void rev_string(char *s)
 {
 	int len = strlen(s);
-	int a, b;
+	int a;
 
-	for (a = 0, b = len - 1; a < b; a++, b--)
+	for (a = len - 1; a >= 0; a--)
 	{
-		int temp = s[a];
-
-		s[a] = s[b];
-		s[b] = temp;
+		putchar(s[a]);
 	}
-	printf("%s\n", s);
+	putchar('\n');
 }
