@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * _strcmp -  compares two strings
  * @s1: first string to be compared
@@ -9,5 +8,5 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	return (strcmp(s1, s2));
+	return (_strcmp(s1, s2));
 }
