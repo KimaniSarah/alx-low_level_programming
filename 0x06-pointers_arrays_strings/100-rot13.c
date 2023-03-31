@@ -8,8 +8,8 @@
 char *rot13(char *s)
 {
 	int i, j;
-	char *lower_half = "AaBbCcDdEeFfGgHhIiJjKkLlMm";
-	char *upper_half = "NnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char *upper_half = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *lower_half = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
