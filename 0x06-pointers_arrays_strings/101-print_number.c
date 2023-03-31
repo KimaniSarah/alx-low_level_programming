@@ -4,16 +4,16 @@
  * print_number - prints an integer
  * @n: the integer to be printed
  *
- * Return: n
+ * Return: Always 0
  */
 void print_number(int n)
 {
 	if (n < 0)
 	{
-		_putchar('-');
+		_putchar(45);
 		n = -n;
 	}
-	else if (n > 9)
+	if (n > 9)
 	{
 		print_number(n / 10);
 	}
