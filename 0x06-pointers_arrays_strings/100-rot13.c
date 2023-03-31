@@ -8,21 +8,16 @@
 char *rot13(char *s)
 {
 	int i, j;
-	char *upper_half = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *lower_half = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *upper_half = "AaBbCcDdEeFfGgHhIiJjKkLlMm";
+	char *lower_half = "NnOoPpQqRrSsTtUuVvWwXxYyZz";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < 52; j++)
+		for (j = 0; j < 26; j++)
 		{
 			if (s[i] == upper_half[j])
 			{
 				s[i] = lower_half[j];
-				break;
-			}
-			else if (s[i] == lower_half[j])
-			{
-				s[i] = upper_half[j];
 				break;
 			}
 		}
