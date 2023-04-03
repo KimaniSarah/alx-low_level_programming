@@ -14,11 +14,30 @@ char *_strstr(char *haystack, char *needle)
 	char *p_needle = needle;
 
 	for (; *p_haystack != '\0'; p_haystack++)
+		/**
+		 *  iterates over the characters in haystack, from the first character.
+		 */
 	{
-		if (*p_haystack == *p_needle)
+		char *temp_haystack = p_haystack;
+		char *temp_needle = p_needle;
+
+		while (*temp_haystack == *temp_needle && *temp_needle != '\0')
+			/**
+			 * iterates over the characters in needle, from the first character.
+			 */
+		{
+			temp_haystack++;
+			temp_needle++;
+		}
+		if (*temp_needle == '\0')
+			/**
+			 * checks if the character pointed to by p_needle is null character ('\0').
+			 * If it is, that means we've found the entire needle string in haystack
+			 */
 		{
 			return (p_haystack);
 		}
 	}
 	return (NULL);
 }
+
