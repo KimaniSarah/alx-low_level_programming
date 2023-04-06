@@ -8,7 +8,7 @@
  */
 int prime_num(int n, int h)
 {
-	if (n >= 2 && h >= n)
+	if (n >= 2 && h == n)
 		/**
 		 * all the other integers before 2 were not divisible to n
 		 * that makes n a prime num
