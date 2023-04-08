@@ -1,4 +1,3 @@
-#include <string.h>
 #include "main.h"
 /**
  * _strncat - concentrates 2 strings
@@ -10,12 +9,20 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	char *ptr = dest;
+	int h = 0;
+	int v;
 
-	while (*ptr != '\0')
+	while (dest[h] != '\0')
 	{
-		ptr++;
+		h++;
 	}
-	strncat(dest, src, n);
+	v = 0;
+	while (v < n && src[v] != '\0')
+	{
+	dest[h] = src[v];
+	h++;
+	v++;
+	}
+	dest[h] = '\0';
 	return (dest);
 }
