@@ -18,6 +18,9 @@ int main(int argc, char *argv[])
 	}
 
 	h = atoi(argv[1]);
+	/**
+	 * atoi changes strings to integers
+	 */
 	v = atoi(argv[2]);
 	z = h * v;
 
