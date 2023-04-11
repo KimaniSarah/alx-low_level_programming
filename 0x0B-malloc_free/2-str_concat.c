@@ -25,6 +25,10 @@ char *str_concat(char *s1, char *s2)
 		ptr_s2++;
 		len_s2++;
 	}
+	if (s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
 	len_total = len_s1 + len_s2;
 	ptr = (char *)malloc(sizeof(char) * len_total + 1);
 	if (ptr == NULL)
