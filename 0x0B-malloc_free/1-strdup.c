@@ -26,7 +26,7 @@ char *_strdup(char *str)
 	}
 
 	h = 0;
-	while (h < len + 1)
+	while (h < len)
 	{
 		ptr[h] = str[h];
 		h++;
