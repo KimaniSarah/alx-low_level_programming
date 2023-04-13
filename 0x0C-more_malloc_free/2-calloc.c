@@ -20,12 +20,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for (h = 0; h < nmemb; h++)
+	for (h = 0; h < (nmemb * size); h++)
 	{
 		((char *)ptr)[h] = 0;
 		/**
-		 * i cast the void pointer to char * in order to iterate
-		 * over each byte of the allocated memory since char = 1byte
+		 * casting of the void pointer to a char pointer is necessary to
+		 * ensure that we can iterate over each byte of the allocated memory bloc
+		 * since char = 1 byte
 		 */
 	}
 	return (ptr);
