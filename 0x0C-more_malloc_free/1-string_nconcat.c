@@ -35,12 +35,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr_s2++;
 		len_s2++;
 	}
-	ptr = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (n >= len_s2)
+	{
+		n = len_s2;
+	}
+	ptr = (char *)malloc(sizeof(char) * (len_s1 + n + 1));
 	for (h = 0; h < len_s1; h++)
 	{
 		ptr[h] = s1[h];
 	}
-	for (v = 0; v < len_s2; v++)
+	for (v = 0; v < n; v++)
 	{
 		ptr[h + v] = s2[v];
 	}
