@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	len_s2 = 0;
 	ptr_s2 = s2;
-	while (*ptr_s2 != '\0' && len_s2 < n)
+	while (*ptr_s2 != '\0')
 	{
 		ptr_s2++;
 		len_s2++;
@@ -48,6 +48,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr[h + v] = s2[v];
 	}
-	ptr[h + v] = '\0';
+	ptr[len_s1 + n] = '\0';
 	return (ptr);
 }
