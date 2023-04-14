@@ -11,8 +11,8 @@
 int main(int argc, char *argv[])
 {
 	int h, v;
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[2]);
+	int num1;
+	int num2;
 	int multiply;
 
 	if (argc != 3)
@@ -32,6 +32,9 @@ int main(int argc, char *argv[])
 		}
 	}
 	multiply = num1 * num2;
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+
 	printf("%d\n", multiply);
 	return (0);
 }
