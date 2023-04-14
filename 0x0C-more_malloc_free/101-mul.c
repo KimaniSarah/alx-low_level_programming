@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	multiply = num1 * num2;
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
+	multiply = num1 * num2;
 
 	printf("%d\n", multiply);
 	return (0);
