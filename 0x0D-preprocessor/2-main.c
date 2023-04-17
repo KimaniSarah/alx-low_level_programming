@@ -1,9 +1,13 @@
 #ifndef MYHEADER_H
 #define MYHEADER_H
 #include <stdio.h>
-int main()
+/**
+ * main - print file name
+ * Return:0
+ */
+int main(void)
 {
 	printf("%s\n", __FILE__);
-	return(0);
+	return (0);
 }
 #endif
