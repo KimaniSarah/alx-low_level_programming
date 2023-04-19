@@ -7,18 +7,22 @@
  *
  * Return: A pointer to the function same as operator given.
  */
-int (*get_op_func(char *s))(int num1, int num2)
+int (*get_op_func(char *s))(int, int)
 {
-	int i = 0;
-	char operators[] = "+-*/%";
-	int (*operations[])(int, int) = {op_add, op_sub, op_mul, op_div, op_mod};
-	while (operators[i])
-	{
-		if (*s == operators[i])
-		{
-			return (operations[i]);
-		}
-		i++;
-	}
-	return (NULL);
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL},
+	};
+
+	int h = 0;
+
+	while (ops[h].op != NULL && *(ops[h].op) != *s)
+		h++;
+
+	return (ops[h].f);
 }
+
