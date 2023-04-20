@@ -2,7 +2,10 @@
 #define VARIADIC_FUNCTIONS_H
 
 /**
- * Header file - contains all my function prototypes
+ * Header file - contains all my function prototypesi
+ * @c:parameter
+ * _putchar:print 1 char
+ * Return:0
  *
  */
 
