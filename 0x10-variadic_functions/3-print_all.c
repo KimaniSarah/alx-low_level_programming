@@ -30,10 +30,10 @@ void print_float(va_list arg)
 }
 
 /**
- * print_str - prints a string
+ * print_string - prints a string
  * @arg: argument to print
  */
-void print_str(va_list arg)
+void print_string(va_list arg)
 {
 	char *str = va_arg(arg, char *);
 
@@ -53,7 +53,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *separator = "";
 	char *types = "cifs";
-	void (*print_fn[])(va_list) = {print_char, print_int, print_float, print_str};
+	void (*p_fn[])(va_list) = {print_char, print_int, print_float, print_string};
 
 	va_start(arg, format);
 
@@ -66,7 +66,7 @@ void print_all(const char * const format, ...)
 			if (types[j] == format[i])
 			{
 				printf("%s", separator);
-				print_fn[j](arg);
+				p_fn[j](arg);
 				separator = ", ";
 			}
 
