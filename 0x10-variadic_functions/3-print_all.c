@@ -1,5 +1,5 @@
-#include <stdarg.h>
 #include "variadic_functions.h"
+#include <stdarg.h>
 #include <stdio.h>
 
 /**
@@ -30,10 +30,10 @@ void print_float(va_list arg)
 }
 
 /**
- * print_string - prints a string
+ * print_str - prints a string
  * @arg: argument to print
  */
-void print_string(va_list arg)
+void print_str(va_list arg)
 {
 	char *str = va_arg(arg, char *);
 
@@ -53,7 +53,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *separator = "";
 	char *types = "cifs";
-	void (*p_fn[])(va_list) = {print_char, print_int, print_float, print_string};
+	void (*print_fn[])(va_list) = {print_char, print_int, print_float, print_str};
 
 	va_start(arg, format);
 
@@ -66,7 +66,7 @@ void print_all(const char * const format, ...)
 			if (types[j] == format[i])
 			{
 				printf("%s", separator);
-				p_fn[j](arg);
+				print_fn[j](arg);
 				separator = ", ";
 			}
 
