@@ -1,6 +1,5 @@
 section .data
-    msg db 'Hello, Holberton', 0Ah ; message to print followed by newline character
-    format db '%s', 0              ; format string for printf
+    fmt db 'Hello, Holberton', 0Ah, 0 ; format string for printf
 
 section .text
     global main
@@ -9,12 +8,11 @@ extern printf
 
 main:
     ; call printf to print the message
-    mov rdi, format     ; first argument: format string
-    mov rsi, msg        ; second argument: pointer to message
-    xor eax, eax        ; clear eax to indicate varargs
-    call printf         ; call printf function
+    mov rdi, fmt    ; load format string address into rdi
+    xor eax, eax    ; clear eax to indicate printf has a variable number of arguments
+    call printf     ; invoke printf
 
-    ; return 0 to indicate success
-    xor eax, eax        ; set eax to 0
-    ret                 ; return from main
+    ; return 0 from main
+    xor eax, eax    ; clear eax
+    ret             ; return from main
 
