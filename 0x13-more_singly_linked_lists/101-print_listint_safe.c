@@ -2,7 +2,6 @@
 /**
  * print_listint_safe - prints a listint_t linked list.
  * @head: pointer to the head of the list
- *
  * Return: the number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
@@ -18,9 +17,6 @@ size_t print_listint_safe(const listint_t *head)
 		{
 		count++;
 		printf("[%p] %d\n", (void *)temp, temp->n);
-		/**
-		 * checks if we have encountered a loop in the linked list
-		 */
 		nextnode = temp->next;
 		if (nextnode != NULL && nextnode >= temp)
 		{
