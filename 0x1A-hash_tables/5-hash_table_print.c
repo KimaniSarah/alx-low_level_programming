@@ -6,8 +6,11 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	long unsigned int i, j;
+	unsigned long int i, j;
 	hash_node_t *temp;
+
+	if (ht == NULL)
+		return;
 
 	j = 1;
 	printf("{");
