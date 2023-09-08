@@ -3,7 +3,7 @@
  * hash_table_set - adds an element to the hash table.
  * @ht: the hash table you want to add or update the key/value to
  * @key:the key and cant be empty
- * @value: the value associated with the key. value must be duplicated. value can be an empty string
+ * @value: the value associated with key value must be dup
  * Return:1 if it succeeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -22,8 +22,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	temp = ht->array[index];
 	while (temp != NULL)
 	{
-		if(strcmp(temp->key, key) == 0)
+		if (strcmp(temp->key, key) == 0)
 		{
+			free(temp->value);
 			temp->value = strdup(value);
 			if (temp->value == NULL)
 			{
