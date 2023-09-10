@@ -184,7 +184,7 @@ void shash_table_delete(shash_table_t *ht)
 	shash_node_t *current, *temp;
 
 	current = NULL;
-	tenp = NULL;
+	temp = NULL;
 	if (ht == NULL)
 		return;
 	current = ht->shead;
